@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For Chotu ❤️</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: radial-gradient(circle at center, #fff0f3 0%, #ffd6e0 100%);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      padding: 20px;
+      overflow-x: hidden;
+    }
+
+    .card {
+      background: #ffffff;
+      padding: 40px 24px 30px;
+      border-radius: 28px;
+      box-shadow: 0 18px 40px rgba(255, 75, 110, 0.18);
+      max-width: 360px;
+      width: 100%;
+      text-align: center;
+      position: relative;
+      z-index: 100;
+    }
+
+    .back-arrow {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      background: #f1f3f5;
+      border: 1px solid #dee2e6;
+      border-radius: 50%;
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 18px;
+      color: #333333;
+      z-index: 200;
+      user-select: none;
+    }
+
+    .back-arrow:active {
+      transform: scale(0.92);
+      background: #e9ecef;
+    }
+
+    .big-icon {
+      font-size: 58px;
+      margin-bottom: 12px;
+      display: inline-block;
+    }
+
+    h1 {
+      color: #e63946;
+      font-size: 23px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    p {
+      color: #555555;
+      font-size: 15px;
+      line-height: 1.6;
+      margin-bottom: 24px;
+    }
+
+    .action-btn {
+      background: linear-gradient(135deg, #ff4d6d, #e63946);
+      color: #ffffff;
+      border: none;
+      padding: 14px 26px;
+      border-radius: 30px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 5px 18px rgba(230, 57, 70, 0.35);
+      width: 100%;
+      display: block;
+    }
+
+    .action-btn:active {
+      transform: scale(0.97);
+    }
+
+    #page1 { display: block; }
+    #page2 { display: none; }
+    #page3 { display: none; }
+
+    .art-frame {
+      width: 250px;
+      height: 250px;
+      margin: 5px auto 16px;
+    }
+
+    .falling-petal {
+      position: fixed;
+      top: -10%;
+      user-select: none;
+      pointer-events: none !important;
+      z-index: 10;
+      animation: fallDown linear forwards;
+    }
+
+    @keyframes fallDown {
+      to {
+        transform: translateY(115vh) rotate(540deg);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+
+    <!-- PAGE 1: Teaser Envelope -->
+    <div id="page1">
+      <span class="big-icon">💌</span>
+      <h1>Hey Chotu...</h1>
+      <p>I have something special from the heart to tell you.<br>Can you please open it?</p>
+      <button class="action-btn" id="btn-to-page2" type="button">Tap to Open Letter ✨</button>
+    </div>
+
+    <!-- PAGE 2: Apology Message -->
+    <div id="page2">
+      <button class="back-arrow" id="back-to-page1" type="button">←</button>
+      <span class="big-icon">🥺👉👈</span>
+      <h1>I am sorry Chotu</h1>
+      <p>I never meant to hurt you or make you upset. But i did, But i will make sure wont repeat it again<br><br>Will you forgive me?</p>
+      <button class="action-btn" id="btn-to-page3" type="button">Forgive Me ❤️</button>
+    </div>
+
+    <!-- PAGE 3: Kneeling Man & Natural Flowers -->
+    <div id="page3">
+      <button class="back-arrow" id="back-to-page2" type="button">←</button>
+      
+      <div class="art-frame">
+        <svg viewBox="0 0 320 320" width="100%" height="100%">
+          <defs>
+            <radialGradient id="roseRed" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#ff1a40" />
+              <stop offset="60%" stop-color="#b70928" />
+              <stop offset="100%" stop-color="#670011" />
+            </radialGradient>
+            <linearGradient id="sunPetal" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#ffe600" />
+              <stop offset="70%" stop-color="#fca311" />
+              <stop offset="100%" stop-color="#d47a00" />
+            </linearGradient>
+            <radialGradient id="sunCore" cx="45%" cy="45%" r="50%">
+              <stop offset="0%" stop-color="#582f0e" />
+              <stop offset="85%" stop-color="#2d1500" />
+              <stop offset="100%" stop-color="#190a00" />
+            </radialGradient>
+            <linearGradient id="leafGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#55a630" />
+              <stop offset="100%" stop-color="#2b6b15" />
+            </linearGradient>
+            <linearGradient id="skin" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#ffdfba" />
+              <stop offset="100%" stop-color="#f8c291" />
+            </linearGradient>
+            <linearGradient id="shirt" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#2b3a4a" />
+              <stop offset="100%" stop-color="#1a2530" />
+            </linearGradient>
+          </defs>
+
+          <!-- Floor Shadow -->
+          <ellipse cx="160" cy="285" rx="100" ry="12" fill="#e8d5d8" opacity="0.6" />
+
+          <!-- Front Kneeling Man Body -->
+          <path d="M 120 220 C 115 250, 95 270, 75 278 C 90 286, 125 284, 132 265 C 136 248, 135 225, 130 220 Z" fill="#3a4756" />
+          <path d="M 72 277 C 65 278, 60 285, 75 287 C 88 288, 98 285, 96 280 Z" fill="#1b1c28" />
+          <path d="M 188 220 C 195 240, 222 245, 230 272 C 220 280, 195 282, 185 270 C 178 250, 180 230, 185 220 Z" fill="#303b48" />
+          <path d="M 200 273 C 215 271, 235 275, 235 284 C 235 288, 205 288, 195 283 Z" fill="#1b1c28" />
+          <path d="M 125 150 Q 160 145 195 150 L 190 225 Q 160 230 130 225 Z" fill="url(#shirt)" />
+          <polygon points="150,148 160,165 170,148" fill="#ffffff" />
+          <circle cx="160" cy="115" r="24" fill="url(#skin)" />
+          <path d="M 134 114 C 132 92, 150 82, 168 84 C 184 86, 188 98, 186 112 C 180 98, 172 96, 160 98 C 148 100, 142 108, 134 114 Z" fill="#1c130d" />
+          
+          <path d="M 148 116 Q 152 119 156 116" stroke="#4a3728" stroke-width="2.2" stroke-linecap="round" fill="none" />
+          <path d="M 164 116 Q 168 119 172 116" stroke="#4a3728" stroke-width="2.2" stroke-linecap="round" fill="none" />
+          <path d="M 157 125 Q 160 128 163 125" stroke="#ba4848" stroke-width="1.8" stroke-linecap="round" fill="none" />
+          <ellipse cx="147" cy="122" rx="4" ry="2" fill="#ff758f" opacity="0.55" />
+          <ellipse cx="173" cy="122" rx="4" ry="2" fill="#ff758f" opacity="0.55" />
+
+          <path d="M 126 160 Q 130 195 145 205" stroke="url(#shirt)" stroke-width="15" stroke-linecap="round" fill="none" />
+          <path d="M 194 160 Q 190 195 175 205" stroke="url(#shirt)" stroke-width="15" stroke-linecap="round" fill="none" />
+
+          <!-- Bouquet -->
+          <polygon points="160,240 122,175 198,175" fill="#d4a373" stroke="#b07d4b" stroke-width="2" />
+          <ellipse cx="160" cy="205" rx="14" ry="4" fill="#bc4749" />
+          <path d="M 160 205 Q 154 220 150 228 M 160 205 Q 166 220 170 228" stroke="#bc4749" stroke-width="3" stroke-linecap="round" />
+
+          <path d="M 120 165 C 105 155, 105 140, 120 145 C 128 147, 128 160, 120 165 Z" fill="url(#leafGrad)" />
+          <path d="M 200 165 C 215 155, 215 140, 200 145 C 192 147, 192 160, 200 165 Z" fill="url(#leafGrad)" />
+
+          <!-- Sunflower -->
+          <g transform="translate(136, 165)">
+            <path d="M 0 -22 C -4 -12, 4 -12, 0 -22 Z" fill="url(#sunPetal)" transform="rotate(0)" />
+            <path d="M 0 -22 C -4 -12, 4 -12, 0 -22 Z" fill="url(#sunPetal)" transform="rotate(30)" />
+            <path d="M 0 -22 C -4 -12, 4 -12, 0 -22 Z" fill="url(#sunPetal)" transform="rotate(60)" />
+            <path d="M 0 -22 C -4 -12, 4 -12, 0 -22 Z" fill="url(#sunPetal)" transform="rotate(90)" />
+            <path d="M 0 -22 C -4 -12, 4 -12, 0 -22 Z" fill="url(#sunPetal)" transform="rotate(120)" />
+            <path d="M 0 -22 C -4 -12, 4 -12, 0 -22 Z" fill="url(#sunPetal)" transform="rotate(150)" />
+            <path d="M 0 -22 C -4 -12, 4 -12, 0 -22 Z" fill="url(#sunPetal)" transform="rotate(180)" />
+            <path d="M 0 -22 C -4 -12, 4 -12, 0 -22 Z" fill="url(#sunPetal)" transform="rotate(210)" />
+            <path d="M 0 -22 C -4 -12, 4 -12, 0 -22 Z" fill="url(#sunPetal)" transform="rotate(240)" />
+            <path d="M 0 -22 C -4 -12, 4 -12, 0 -22 Z" fill="url(#sunPetal)" transform="rotate(270)" />
+            <path d="M 0 -22 C -4 -12, 4 -12, 0 -22 Z" fill="url(#sunPetal)" transform="rotate(300)" />
+            <path d="M 0 -22 C -4 -12, 4 -12, 0 -22 Z" fill="url(#sunPetal)" transform="rotate(330)" />
+            <circle cx="0" cy="0" r="11" fill="url(#sunCore)" />
+          </g>
+
+          <!-- Red Roses -->
+          <g transform="translate(182, 160)">
+            <circle cx="0" cy="0" r="15" fill="url(#roseRed)" />
+            <path d="M -9 2 C -8 -8, 6 -11, 10 -4 C 12 5, 2 11, -5 8" fill="none" stroke="#ff4d6d" stroke-width="1.8" />
+            <circle cx="0" cy="0" r="2.5" fill="#fff" opacity="0.6" />
+          </g>
+          <g transform="translate(160, 145)">
+            <circle cx="0" cy="0" r="12" fill="url(#roseRed)" />
+            <path d="M -7 1 C -6 -6, 5 -8, 7 -2 C 8 4, 1 8, -4 6" fill="none" stroke="#ff4d6d" stroke-width="1.5" />
+            <circle cx="0" cy="0" r="2" fill="#fff" opacity="0.6" />
+          </g>
+
+          <ellipse cx="140" cy="195" rx="6" ry="5" fill="url(#skin)" />
+          <ellipse cx="180" cy="195" rx="6" ry="5" fill="url(#skin)" />
+        </svg>
+      </div>
+
+      <h1>Thank You, Chotu! 🌻🌹</h1>
+      <p style="margin-bottom: 0;">These sunflowers & roses are just for you.<br>I promise I wont repeat this kind of behaviour!</p>
+     
+    </div>
+
+  </div>
+
+  <script>
+    document.getElementById('btn-to-page2').addEventListener('click', function() {
+      document.getElementById('page1').style.display = 'none';
+      document.getElementById('page2').style.display = 'block';
+      document.getElementById('page3').style.display = 'none';
+    });
+
+    document.getElementById('back-to-page1').addEventListener('click', function() {
+      document.getElementById('page2').style.display = 'none';
+      document.getElementById('page1').style.display = 'block';
+      document.getElementById('page3').style.display = 'none';
+    });
+
+    document.getElementById('btn-to-page3').addEventListener('click', function() {
+      document.getElementById('page2').style.display = 'none';
+      document.getElementById('page3').style.display = 'block';
+      
+      const symbols = ['🌹', '🌻', '🌸', '✨', '❤️'];
+      for (let i = 0; i < 35; i++) {
+        setTimeout(function() {
+          const petal = document.createElement('div');
+          petal.className = 'falling-petal';
+          petal.innerText = symbols[Math.floor(Math.random() * symbols.length)];
+          petal.style.left = Math.random() * 92 + 'vw';
+          petal.style.animationDuration = (2.2 + Math.random() * 2) + 's';
+          petal.style.fontSize = (16 + Math.random() * 16) + 'px';
+          document.body.appendChild(petal);
+
+          setTimeout(function() { petal.remove(); }, 4200);
+        }, i * 90);
+      }
+    });
+
+    document.getElementById('back-to-page2').addEventListener('click', function() {
+      document.getElementById('page3').style.display = 'none';
+      document.getElementById('page2').style.display = 'block';
+    });
+  </script>
+</body>
+</html>
